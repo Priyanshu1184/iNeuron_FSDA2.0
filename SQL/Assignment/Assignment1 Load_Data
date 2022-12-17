@@ -1,1 +1,89 @@
+use database demo_database;
+//QUE 1
+create or replace table  sales_data_final (
+        order_id STRING ,
+        order_date string NOT NULL PRIMARY KEY,
+        ship_date string,
+        ship_mode varchar(50),
+        customer_name varchar(40),
+        segment	varchar(40),
+        state	varchar(60),
+        country	varchar(40),
+        market  varchar(40),	
+        region varchar(40),
+        product_id	string,
+        category varchar(40),	
+        sub_category varchar(40),	
+        product_name varchar(300),	
+        sales  smallint, 	
+        quantity number(12,0),
+        discount float(24),	
+        profit	float(53),
+        shipping_cost float(53),	
+        order_priority varchar(30),	
+        year STRING
+       );
+describe table sales_data_final;
+SELECT * FROM sales_data_final;
 
+//Que 2
+
+alter table sales_data_final
+  drop primary key;
+  
+alter table sales_data_final 
+  add primary key(order_id)
+
+
+
+//Que 3
+// In snowflake the default date format is YYYY-MM-DD
+describe table sales_data_final
+
+//Here the Order date and Ship date are in varchar type
+
+//Que4
+alter table sales_data_final
+   add column order_extract varchar(20)
+     
+SELECT ORDER_ID FROM sales_data_final;
+ UPDATE sales_data_final
+  SET ORDER_EXTRACT = SUBSTRING(ORDER_ID,9) 
+
+
+SELECT ORDER_EXTRACT FROM sales_data_final
+    
+//QUE5
+alter table sales_data_final
+add column Discount_Flag varchar(10)
+select * from sales_data_final;
+ 
+UPDATE sales_data_final
+set Discount_Flag= CASE WHEN DISCOUNT>0 THEN 'YES'
+                   ELSE 'NO'
+                   end
+  
+//QUE6 
+alter table sales_data_final
+   add column process_days varchar(20)
+ 
+select ORDER_DATE,SHIP_DATE FROM sales_data_final;
+ UPDATE sales_data_final
+  SET process_days= datediff('day',ORDER_DATE,SHIP_DATE)
+select process_days from sales_data_final
+
+//Que7
+
+alter table sales_data_final
+add column Rating varchar(10)
+select * from sales_data_final;
+UPDATE sales_data_final
+  SET Rating =  CASE WHEN process_days<=3 THEN 5
+                     WHEN process_days>3 and process_days<= 6 THEN 4
+                     WHEN process_days>6 and process_days<= 10 THEN 3
+                     WHEN process_days>10 THEN 2
+               END
+      
+      
+      
+select * from sales_data_final
