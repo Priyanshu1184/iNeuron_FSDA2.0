@@ -1,4 +1,4 @@
-##Question
+#Question
 1.What are the two values of the Boolean data type? How do you write them?
 2. What are the three different types of Boolean operators?
 3. Make a list of each Boolean operator's truth tables (i.e. every possible combination of Boolean values for the operator and what it evaluate ).
@@ -30,7 +30,7 @@ print('spam')
 12. Write a short program that prints the numbers 1 to 10 using a for loop. Then write an equivalent program that prints the numbers 1 to 10 using a while loop.
 13. If you had a function named bacon() inside a module named spam, how would you call it after importing spam?
 
-##Answers
+#Answers
 1. The two values of the Boolean data type are True and False.
 2. The three types of Boolean operators are AND, OR, and NOT.
 3. Truth Tables for Boolean operators:
