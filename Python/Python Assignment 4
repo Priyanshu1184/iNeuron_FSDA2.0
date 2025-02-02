@@ -1,0 +1,81 @@
+1. What exactly is []?
+
+[] represents an empty list in Python. It is a list with no elements.
+
+2. In a list of values stored in a variable called spam, how would you assign the value 'hello' as the third value? (Assume [2, 4, 6, 8, 10] are in spam.)
+
+You can assign the value 'hello' as the third value using indexing:
+spam[2] = 'hello'
+
+3. What is the value of spam[int(int('3' * 2) / 11)]?
+
+Let's break it down:
+'3' * 2 results in '33'.
+int('33') converts it to the integer 33.
+33 / 11 equals 3.0, and when converted to an integer, it becomes 3.
+spam[3] will give the fourth value in the list spam, which is 'd'. So, the value is 'd'.
+
+4. What is the value of spam[-1]?
+
+spam[-1] accesses the last element of the list. Since the list is ['a', 'b', 'c', 'd'], the value is 'd'.
+
+5. What is the value of spam[:2]?
+
+spam[:2] retrieves the first two elements from the list. So, the value is ['a', 'b'].
+
+6. What is the value of bacon.index('cat')?
+
+bacon.index('cat') finds the index of the first occurrence of 'cat' in the list. The value is 1.
+
+7. How does bacon.append(99) change the look of the list value in bacon?
+
+bacon.append(99) adds 99 to the end of the list, so the new list will be [3.14, 'cat', 11, 'cat', True, 99].
+
+8. How does bacon.remove('cat') change the look of the list in bacon?
+
+bacon.remove('cat') removes the first occurrence of 'cat' from the list. After this operation, the list will be [3.14, 11, 'cat', True].
+
+9. What are the list concatenation and list replication operators?
+
+The concatenation operator is +, and the replication operator is *.
+Example: [1, 2] + [3, 4] results in [1, 2, 3, 4].
+Example: [1, 2] * 2 results in [1, 2, 1, 2].
+
+10. What is the difference between the list methods append() and insert()?
+
+append() adds an element to the end of the list.
+insert() adds an element at a specified index.
+Example: spam.append('hello') adds 'hello' at the end. spam.insert(2, 'hello') adds 'hello' at index 2.
+
+11. What are the two methods for removing items from a list?
+
+The two methods are:
+remove() — removes the first occurrence of a value.
+pop() — removes an item by index and returns it.
+
+12. Describe how list values and string values are identical.
+
+Both lists and strings are ordered collections of items, can be indexed and sliced, and are iterable in Python. Lists can hold any data type, while strings hold sequences of characters.
+
+13. What’s the difference between tuples and lists?
+
+Tuples are immutable (cannot be changed after creation), whereas lists are mutable (can be modified).
+Tuples are defined using parentheses () while lists use square brackets [].
+
+14. How do you type a tuple value that only contains the integer 42?
+
+A tuple with just one element is written as (42,). The comma is necessary to distinguish it from a regular parentheses expression.
+
+15. How do you get a list value’s tuple form? How do you get a tuple value’s list form?
+
+To convert a list to a tuple, use tuple(list).
+To convert a tuple to a list, use list(tuple).
+
+16. Variables that "contain" list values are not necessarily lists themselves. Instead, what do they contain?
+
+Variables that "contain" list values hold references to the list, not the actual list itself.
+
+17. How do you distinguish between copy.copy() and copy.deepcopy()?
+
+copy.copy() creates a shallow copy, which means nested objects are still referenced.
+copy.deepcopy() creates a deep copy, meaning all nested objects are copied recursively, and there are no shared references.
