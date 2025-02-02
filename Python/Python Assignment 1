@@ -1,0 +1,54 @@
+1. In the below elements which of them are values or an expression?
+Values:
+'hello' (string)
+-87.8 (float)
+6 (integer)
+Expressions:
+- (unary operator)
+/ (binary operator)
+
+2. What is the difference between string and variable?
+String: A string is a data type used to represent text, enclosed in quotation marks (e.g., 'hello' or "world").
+Variable: A variable is a name used to store a value or reference. It can hold different types of data (such as integers, strings, etc.), and its value can be changed during the program's execution (e.g., x = 10).
+
+3. Describe three different data types.
+Integer: Whole numbers, positive or negative, without decimals (e.g., 10, -5).
+String: A sequence of characters, usually enclosed in single or double quotes (e.g., 'hello', "world").
+Float: Numbers that have a decimal point (e.g., 3.14, -87.8).
+
+4. What is an expression made up of? What do all expressions do?
+An expression is made up of values, variables, operators, and/or function calls. Expressions are evaluated to produce a result, which can be a number, string, or any other data type depending on the context.
+
+5. This assignment statement, like spam = 10. What is the difference between an expression and a statement?
+Expression: An expression is a combination of values, variables, and operators that can be evaluated to produce a result. Example: 3 + 5.
+Statement: A statement performs an action or assigns a value. It doesn't necessarily produce a value itself. Example: spam = 10 is an assignment statement.
+
+6. After running the following code, what does the variable bacon contain?
+
+bacon = 22
+bacon + 1
+
+Answer: bacon will still contain the value 22. The expression bacon + 1 does not assign the result back to bacon. To update the variable, you would need to write bacon = bacon + 1.
+
+7. What should the values of the following two terms be?
+'spam' + 'spamspam' results in 'spamspamspam' (concatenation).
+'spam' * 3 results in 'spamspamspam' (repetition of string).
+
+8. Why is eggs a valid variable name while 100 is invalid?
+eggs is a valid variable name because it starts with a letter and follows Python's naming conventions.
+100 is invalid because variable names cannot start with a number. They must start with a letter or an underscore.
+
+9. What three functions can be used to get the integer, floating-point number, or string version of a value?
+int() – Converts a value to an integer.
+float() – Converts a value to a floating-point number.
+str() – Converts a value to a string.
+
+10. Why does this expression cause an error? How can you fix it?
+
+'I have eaten ' + 99 + ' burritos.'
+
+Error: The error occurs because you cannot concatenate a string ('I have eaten ') with an integer (99).
+Fix: Convert the integer to a string before concatenating:
+
+'I have eaten ' + str(99) + ' burritos.'
+
